@@ -57,7 +57,11 @@ font-weight: bold;
     line-height: 36px;
     vertical-align: middle;
 }
-
+.fi {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
 Footer {
     text-align: center;
     font-size: 18px;

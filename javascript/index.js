@@ -27,6 +27,19 @@ parisTimeElement.innerHTML = parisTime.format(
     "h:mm:ss [<small>]A[</small>]"
 );
 }
+
+let melbourneElement = document.querySelector("#melbourne");
+if (melbourneElement) {
+let melbourneDateElement = melbourneElement.querySelector(".date");
+let melbourneTimeElement = melbourneElement.querySelector(".time");
+let melbourneTime = moment().tz("Australia/Melbourne");
+
+
+melbourneDateElement.innerHTML = melbourneTime.format("MMMM Do YYYY");
+melbourneTimeElement.innerHTML = melbourneTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+);
+}
 }
 
 function updateCity(event) {
@@ -45,7 +58,9 @@ citiesElement.innerHTML = `
 <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
     </div>
 <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
-</div>`;
+</div>
+<a href="index.html">All cities</a>
+`;
 }
 
 updateTime();
